@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                 </button> -->
                 <a class="navbar-brand" href="#">
-                    B Channel
+                    <img alt="Brand" src="assets/images/BeatsByDreSoloLogo.jpg" width="50px" height="50px">
                 </a>
             </div>
 <!--             <div id="navbar" class="navbar-collapse collapse">
@@ -69,8 +69,28 @@
         </div>
     </nav>
     <div class="container" ng-init="showRomaji = false;">
-        I'm developing
+        <div class="row">
+            <div class="col-xs-3">
+                <button type="button" class="btn btn-default mar-top-7em pull-right" ng-click="getPreviousWord(); showRomaji = false;">Previous</button>
+            </div>
+            <div class="col-xs-6 text-center">
+                <span class="fs-15 pointer" ng-bind="kotoba.word" ng-click="showRomaji = !showRomaji"></span>
+                <br/>
+                <span class="fs-10" ng-bind="kotoba.romaji" ng-show="showRomaji"></span>
+            </div>
+            <div class="col-xs-3">
+                <button type="button" class="btn btn-default mar-top-7em pull-left" ng-click="getNextWord(); showRomaji = false;">Next</button>
+            </div>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-right">
+              <span> By Bảo ハンサム</span>
+                <!-- <button type="button" class="btn btn-default" ng-click="showRomaji = !showRomaji">Romaji</button> -->
+            </div>
+        </div>
+    </footer>
     <!-- /container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
