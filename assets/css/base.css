@@ -1,16 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:700);
-
 body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     overflow-y: hidden;
     color: #797979;
-    background-color: rgb(235, 239, 242);
+    background-color: #e5e5e5;
 }
 
 .b-bg-1 {
-/*    content: "";
+    /*    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -22,8 +21,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-
 }
 
 
@@ -66,22 +63,22 @@ body {
 @media (min-width: 768px) {
     .sidebar {
         position: fixed;
-        top: 50px;
+        top: 44px;
         bottom: 0;
-        left: 0;
-        z-index: 1000;
+        right: 0;
+        z-index: 1031;
         display: block;
         padding: 20px;
         overflow-x: hidden;
         overflow-y: auto;
-        background: rgba(253, 246, 240, 0.9);
+        background: #fff;
+        box-shadow: -2px 2px 4px rgba(0, 0, 0, .15);
+        -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, .15);
+        /*width: 260px;*/
         /* Scrollable contents if viewport is shorter than content. */
         /*border-right: 1px solid #eee;*/
     }
 }
-
-
-/* Sidebar navigation */
 
 .nav-sidebar {
     margin-right: -20px;
@@ -117,9 +114,8 @@ body {
  */
 
 .main {
-    padding: 20px;
-    background: rgba(230, 215, 210, 0.9);
-    height:100vh;
+    /*padding: 20px;*/
+    height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -161,11 +157,26 @@ body {
    Overide Bootstrap
 ============= */
 
+.navbar {
+    min-height: 44px;
+    height: 44px;
+}
+
+.navbar-brand {
+    height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.navbar-text {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .navbar-default {
     background-color: #fff;
-    -webkit-box-shadow: 0px 0.3px 0.5px 0.5px rgba(163, 153, 163, 0.2);
-    -moz-box-shadow: 0px 0.3px 0.5px 0.5px rgba(163, 153, 163, 0.2);
-    box-shadow: 0px 0.3px 0.5px 0.5px rgba(163, 153, 163, 0.2);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
     border-radius: 0px;
     /*border-top: 3px solid #71b6f9;*/
 }
@@ -182,46 +193,79 @@ body {
     font-size: 1em;
 }
 
+.b-channel-list-btn {
+    margin-right: 20px;
+}
+
+.b-channel-list-btn > span.navbar-text > i.fa {
+    font-size: 17px;
+}
+
+.b-row.row,
+.b-row.form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 /* =============
    End Overide Bootstrap
 ============= */
 
-.b-main-side {
-    margin-top: 50px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #f5f5f5;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-.fs-10 {
-    font-size: 10em;
-}
-
-.fs-15 {
-    font-size: 15em;
-}
-
-.mar-top-7em {
-    margin-top: 7em;
-}
 
 /**
  * Channel content
  */
-.b-msg {
-    margin-bottom: 20px;
+
+.b-card {
+    /*min-width: 500px;*/
+    width: 600px;
+    height: 90%;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    position: relative;
 }
+
+.b-card-header {
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.b-card-header-avt {
+    width: 60px;
+    height: 60px;
+}
+
+.b-card-header-avt > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.b-card-content {
+    width: 100%;
+    height: 75%;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    overflow-y: auto;
+}
+
+.b-msg {
+    margin-top: 20px;
+}
+
+.b-msg:first-child {
+    margin-top: 0;
+}
+
 .b-msg > .b-avt > img {
     width: 40px;
     height: 40px;
@@ -234,6 +278,10 @@ body {
 .b-msg.b-msg-right * {
     margin-left: 10px;
     /*height: 40px;*/
+}
+
+.b-msg.b-msg-left *:first-child {
+    margin-left: 0;
 }
 
 .b-msg.b-msg-left > * {
@@ -265,7 +313,78 @@ body {
 }
 
 .b-msg.b-msg-right > .b-msg-content {
-    background: #35B7F3;
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+}
+
+.b-msg-f {
+    background-color: #f5f5f5;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    border-color: #d8d8d8;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.b-msg-f > div {
+    margin-top: 5px;
+}
+
+.b-msg-f > div:first-child {
+    margin-top: 0;
+}
+
+.b-msg-f .b-msg-ipt textarea {
+    resize: none;
+}
+
+.b-msg-f .b-opt-btn button {
+    float: right;
 }
 
 
+/**
+ *
+ */
+
+.b-no-pad {
+    padding: 0;
+}
+
+.b-main-side {
+    margin-top: 50px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fs-10 {
+    font-size: 10em;
+}
+
+.fs-15 {
+    font-size: 15em;
+}
+
+.mar-top-7em {
+    margin-top: 7em;
+}
+
+.b-scroll { overflow-y:scroll; }
+.b-scroll::-webkit-scrollbar { width: 5px; }
+.b-scroll::-webkit-scrollbar-track { background-color: rgba(234, 234, 234, 0); }
+.b-scroll::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.2); border-radius: 5px; }
+.b-scroll::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.4); }

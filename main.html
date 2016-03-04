@@ -12,6 +12,7 @@
     <title>BChannel</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="assets/libs/bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
     <!-- Custom styles for this template -->
@@ -25,13 +26,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+<!-- class="b-bg-1" -->
 
-<body ng-controller="kanjiCtrl" class="b-bg-1">
+<body ng-controller="kanjiCtrl">
     <!-- Top Bar Start -->
     <div class="top-bar">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <!-- <div class="container-fluid"> -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -60,10 +62,14 @@
                             </ul>
                         </li>
                     </ul> -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="../navbar/">Default</a></li>
+                    <ul class="nav navbar-nav navbar-right b-channel-list-btn">
+                        <span class="navbar-text"><i class="fa fa-user"></i><span class="label label-danger">2</span></span>
+                        <span class="navbar-text"><i class="fa fa-users"></i><span class="label label-danger">4</span></span>
+                        <!-- <button type="button" class="btn btn-success navbar-btn">User <i class="fa fa-user"></i></button> -->
+                        <!-- <button type="button" class="btn btn-success navbar-btn">Channel <i class="fa fa-users"></i></button> -->
+                        <!--                         <li><a href="../navbar/">Default</a></li>
                         <li><a href="../navbar-static-top/">Static top</a></li>
-                        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -72,6 +78,168 @@
     </div>
     <div class="container-fluid b-main-side">
         <div class="row">
+            <div class="col-sm-9 col-md-10 main">
+                <div class="b-row b-card center-block">
+                    <div class="b-row row b-card-header">
+                        <div class="b-card-header-avt">
+                            <img src="assets/images/matthew.png">
+                        </div>
+                    </div>
+                    <div class="b-card-content b-scroll">
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-left">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                        <div class="b-row row b-msg b-msg-right">
+                            <div class="b-avt">
+                                <img src="assets/images/matt.jpg">
+                            </div>
+                            <div class="b-msg-content">
+                                Bao dep trai
+                            </div>
+                            <div class="b-msg-time">
+                                12:34
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-row row b-msg-f">
+                        <div class="row b-msg-ipt">
+                            <div class="col-xs-12">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+<!--                         <div class="row b-opt-btn">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-success">Send</button>
+                            </div>
+                        </div> -->
+                        <!--
+                            <div class="b-ipt-msg">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="b-msg-send">
+                                <button type="button" class="btn btn-success">Send</button>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="#">Bao Tran <span class="sr-only">(current)</span></a></li>
@@ -79,100 +247,6 @@
                     <li><a href="#">Tan Nguyen</a></li>
                     <li><a href="#">Tam Nguyen</a></li>
                 </ul>
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="row b-channel-content">
-                    <div class="row b-msg b-msg-left">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-right">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-left">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-right">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-left">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai    Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-right">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-left">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                    <div class="row b-msg b-msg-right">
-                        <div class="b-avt">
-                            <img src="assets/images/matt.jpg">
-                        </div>
-                        <div class="b-msg-content">
-                            Bao dep trai
-                        </div>
-                        <div class="b-msg-time">
-                            12:34
-                        </div>
-                    </div>
-                </div>
-                <div class="row b-channel-input-msg">
-                </div>
             </div>
         </div>
     </div>
