@@ -9,6 +9,10 @@ md-input-container.b-no-magin-t-b {
     margin-bottom: 0;
 }
 
+md-input-container > md-icon.b-fa-icon {
+    top: 17px;
+}
+
 @media only screen and (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
     .md-sidenav-right {
         top: 58px !important;

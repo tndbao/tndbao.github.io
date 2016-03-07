@@ -1,7 +1,3 @@
-/** 
- * Copyright (C) 2015 NTT Software Corporation
- */
-
 /* RequireJs module dependences */
 var dependences = [
     'jquery',
@@ -31,7 +27,7 @@ define(dependences, function() {
             'self',
             // Allow loading from outer templates domain.
             SERVER_URL + '/**'
-        ]); 
+        ]);
     });
 
     bApp.config(['$routeProvider',
