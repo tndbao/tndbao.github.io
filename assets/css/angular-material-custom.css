@@ -1,0 +1,22 @@
+/* Angular Material Custom */
+
+.md-sidenav-right {
+    top: 64px !important;
+}
+
+md-input-container.b-no-magin-t-b {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
+    .md-sidenav-right {
+        top: 58px !important;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: landscape) {
+    .md-sidenav-right {
+        top: 47px !important;
+    }
+}

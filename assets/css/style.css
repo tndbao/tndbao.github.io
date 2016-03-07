@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:700);
+
+body {
+    background-color: #eee;
+    background: url(../images/la_digue_beach_seychelles-1920x1080.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*************************
+ * LOGO B
+ *************************/
+.b-logo {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+}
+
+.panel.b-panel {
+    background: none;
+    box-shadow: none;
+}
+
+.b-panel > .panel-body {
+    height: 90vh;
+}
+
+
+/*************************
+ * Custom Timeline
+ *************************/
+.timeline > li > .timeline-badge > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+.timeline > li > .timeline-panel {
+    /*padding: 12px !important;*/
+    background: white;
+    border-radius: 10px;
+}
+
+.timeline > li > .timeline-badge {
+    background: none;
+}
+
+.timeline-body > img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+
+/*************************
+ * Custom scrollbar
+ *************************/
+.b-scroll {
+    overflow-y: scroll;
+}
+
+.b-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.b-scroll::-webkit-scrollbar-track {
+    background-color: rgba(234, 234, 234, 0);
+}
+
+.b-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.b-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}

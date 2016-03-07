@@ -1,18 +1,53 @@
-'use strict';
+/** 
+ * Copyright (C) 2015 NTT Software Corporation
+ */
 
-/* App Module */
+/* RequireJs module dependences */
+var dependences = [
+    'jquery',
+    'angular',
+    'angular-route',
 
-var bChannelKanji = angular.module('bChannel.kanji', ['bChannel.kanji.services']);
-bChannelKanji.controller('kanjiCtrl', ['$scope', 'KanjiService', kanjiCtrl]);
+    'config',
 
-function kanjiCtrl($scope, KanjiService) {
-    $scope.kotoba = KanjiService.getNextWord();
+    'main'
+];
 
-    $scope.getNextWord = function (argument) {
-      $scope.kotoba = KanjiService.getNextWord();
-    };
+define(dependences, function() {
 
-    $scope.getPreviousWord = function (argument) {
-      $scope.kotoba = KanjiService.getPreviousWord();
-    };
-}
+    /* Angular module dependences */
+    var moduleDependences = [
+        'ngRoute',
+
+        /* Main screen module */
+        'b.main',
+    ];
+
+    var bApp = angular.module('b', moduleDependences);
+
+    bApp.config(function($sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            // Allow same origin resource loads.
+            'self',
+            // Allow loading from outer templates domain.
+            SERVER_URL + '/**'
+        ]); 
+    });
+
+    bApp.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+            when('/', {
+                templateUrl: './app/main/index.html',
+                controller: 'b.main.ctrl',
+                // css: ['../assets/css/default_top.css']
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
+        }
+    ]);
+
+    // Start up angular application
+    angular.bootstrap(document, ['b']);
+});
