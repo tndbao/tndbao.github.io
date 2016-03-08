@@ -1,0 +1,194 @@
+<div id="wrapper">
+    <md-toolbar>
+        <div class="md-toolbar-tools" md-whiteframe="4" style="background: #db4437;">
+            <md-button class="md-icon-button" aria-label="Settings">
+                <i class="fa fa-bars"></i>
+            </md-button>
+            <h2>
+                <span class="b-logo">b</span>
+            </h2>
+            <span flex=""></span>
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <i class="fa fa-heart" style="color: greenyellow;"></i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More" ng-click="toggleRight()">
+                <i class="fa fa-users"></i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" back-backdrop="transparent">
+        <!--         <md-toolbar>
+            <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        </md-toolbar> -->
+        <md-content layout-padding="">
+            <md-input-container md-no-float class="md-block b-no-magin-t-b">
+                <md-icon md-font-icon="fa-search" class="fa b-fa-icon"></md-icon>
+                <input ng-model="user.phone" type="text" placeholder="Find user or room" md-errors-spacer="no">
+            </md-input-container>
+            <md-tabs md-selected="selectedIndex" md-autoselect md-center-tabs="true" md-no-pagination="no" md-stretch-tabs="always">
+                <md-tab>
+                    <md-tab-label>
+                        User
+                        <i class="fa fa-user"></i>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <md-list>
+                            <md-list-item class="md-3-line">
+                                <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                                <div class="md-list-item-text" layout="column">
+                                    <h3>Bao Tran</h3>
+                                    <h4>Feeling</h4>
+                                    <p>Good stuff</p>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </md-tab-body>
+                </md-tab>
+                <md-tab>
+                    <md-tab-label>
+                        Room
+                        <i class="fa fa-users"></i>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <md-list>
+                            <md-list-item class="md-2-line">
+                                <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                                <div class="md-list-item-text" layout="column">
+                                    <h3>Biz-renv 2.0</h3>
+                                    <h4>Feeling</h4>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </md-tab-body>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+    </md-sidenav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <!-- /.panel
+                <div class="panel b-panel">
+                    <div class="panel-heading text-center">
+                        <i class="fa fa-clock-o fa-fw"></i> <span>Responsive Timeline</span>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body b-scroll">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge">
+                                    <img src="./assets/images/matt.jpg">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <div>
+                                            <span class="label label-primary">Bao Tran</span><span class="timeline-title"> Lorem ipsum </span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <div>
+                                            <span class="label label-primary">Bao Tran</span><span class="timeline-title"> Lorem ipsum </span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <img src="./assets/images/eiffel_tower_at_sunrise-wallpaper-1920x1080.jpg">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge info"><i class="fa fa-save"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
+                                        <hr>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-gear"></i> <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a>
+                                                </li>
+                                                <li><a href="#">Another action</a>
+                                                </li>
+                                                <li><a href="#">Something else here</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div> -->
+    <!-- /.container-fluid -->
+</div>
+<!-- /#wrapper -->

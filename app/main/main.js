@@ -23,6 +23,8 @@ define(dependences, function() {
         .controller('b.main.rightNav.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', rightNavCtrl]);
 
     function mainCtrl($scope, $timeout, $mdSidenav, $log, $q) {
+        $('#b-loading-container').fadeOut();
+
         $scope.toggleLeft = buildDelayedToggler('left');
         $scope.toggleRight = buildToggler('right');
 

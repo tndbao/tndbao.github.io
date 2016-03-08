@@ -1,16 +1,13 @@
 <div id="wrapper">
     <md-toolbar>
         <div class="md-toolbar-tools" md-whiteframe="4" style="background: #db4437;">
-            <md-button class="md-icon-button" aria-label="Settings">
+            <md-button class="md-icon-button" aria-label="b-c-settings">
                 <i class="fa fa-bars"></i>
             </md-button>
             <h2>
                 <span class="b-logo">b</span>
             </h2>
             <span flex=""></span>
-            <md-button class="md-icon-button" aria-label="Favorite">
-                <i class="fa fa-heart" style="color: greenyellow;"></i>
-            </md-button>
             <md-button class="md-icon-button" aria-label="More" ng-click="toggleRight()">
                 <i class="fa fa-users"></i>
             </md-button>
@@ -64,131 +61,105 @@
             </md-tabs>
         </md-content>
     </md-sidenav>
-    <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-12">
-                <!-- /.panel -->
-                <div class="panel b-panel">
-                    <div class="panel-heading text-center">
-                        <i class="fa fa-clock-o fa-fw"></i> <span>Responsive Timeline</span>
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body b-scroll">
-                        <ul class="timeline">
-                            <li>
-                                <div class="timeline-badge">
-                                    <img src="./assets/images/matt.jpg">
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <div>
-                                            <span class="label label-primary">Bao Tran</span><span class="timeline-title"> Lorem ipsum </span>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <div>
-                                            <span class="label label-primary">Bao Tran</span><span class="timeline-title"> Lorem ipsum </span>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <img src="./assets/images/eiffel_tower_at_sunrise-wallpaper-1920x1080.jpg">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                                        <hr>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                <i class="fa fa-gear"></i> <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Action</a>
-                                                </li>
-                                                <li><a href="#">Another action</a>
-                                                </li>
-                                                <li><a href="#">Something else here</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
+                <section class='b-c-container md-whiteframe-2dp'>
+                    <header class='b-c-top-header'>
+                        <div class='left'>
+                            <span class='header-icon'><i class="fa fa-comments-o"></i></span>
+                            <span class='b-c-top-header-tit'>Bao Tran</span>
+                        </div>
+                        <div class='right'>
+                            <span class='typicons-minus'></span>
+                            <span class='typicons-times'></span>
+                        </div>
+                    </header>
+                    <!--                     <div class="b-c-setting">
+                        <div class='left'>
+                            <span class='icon-facetime-video'><i class="fa fa-file-video-o"></i></span>
+                            <span class='icon-user'><i class="fa fa-user"></i></span>
+                        </div>
+                        <div class='right'>
+                            <span class='icon-cog'><i class="fa fa-cog"></i></span>
+                        </div>
+                    </div> -->
+                    <ol class='b-c-msg-box'>
+                        <li class='another'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. hi how are you. When you come to home. </p>
+                                <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+                            </div>
+                        </li>
+                        <li class='me'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>Hi fine bro.</p>
+                                <p>Tomorrow morning i will rech.</p>
+                                <time datetime='2009-11-13T20:14'>37 mins</time>
+                            </div>
+                        </li>
+                        <li class='another'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>hi happy to welcome you.</p>
+                                <p>I bring some dress for you.</p>
+                            </div>
+                        </li>
+                        <li class='me'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>I will come and pickup you.</p>
+                                <p>what the time you will reach.</p>
+                                <time datetime='2009-11-13T20:14'>37 mins</time>
+                            </div>
+                        </li>
+                        <li class='another'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>i will not know exact time i come arround 8'O colock </p>
+                                <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+                            </div>
+                        </li>
+                        <li class='another'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>Ok buy Bro....</p>
+                                <p>See you tomorrow Morning.</p>
+                            </div>
+                        </li>
+                        <li class='another'>
+                            <div class='avatar-icon'>
+                                <img src='./assets/images/matt.jpg'>
+                            </div>
+                            <div class='messages'>
+                                <p>Ok buy Bro....</p>
+                                <p>See you tomorrow Morning.</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <footer class="b-c-msg-bot">
+                        <md-input-container class="md-block b-no-magin-t-b">
+                            <label>Say some cool</label>
+                            <textarea ng-model="user.biography" rows="1" md-select-on-focus md-errors-spacer="no"></textarea>
+                        </md-input-container>
+                    </footer>
+                </section>
             </div>
-            <!-- /.col-lg-12 -->
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
 </div>
 <!-- /#wrapper -->
