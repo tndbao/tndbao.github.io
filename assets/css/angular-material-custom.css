@@ -1,4 +1,13 @@
 /* Angular Material Custom */
+md-sidenav.b-md-sidenav {
+    width: 250px;
+}
+
+.md-list-item-text > .b-custom {
+    background: #FBE9E7;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
 
 .md-sidenav-right {
     top: 64px !important;
@@ -15,12 +24,12 @@ md-input-container > md-icon.b-fa-icon {
 
 @media only screen and (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
     .md-sidenav-right {
-        top: 58px !important;
+        top: 56px !important;
     }
 }
 
 @media only screen and (min-width: 0) and (max-width: 959px) and (orientation: landscape) {
     .md-sidenav-right {
-        top: 47px !important;
+        top: 46px !important;
     }
 }

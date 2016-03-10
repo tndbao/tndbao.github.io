@@ -1,19 +1,5 @@
-<div id="wrapper">
-    <md-toolbar>
-        <div class="md-toolbar-tools" md-whiteframe="4" style="background: #db4437;">
-            <md-button class="md-icon-button" aria-label="b-c-settings">
-                <i class="fa fa-bars"></i>
-            </md-button>
-            <h2>
-                <span class="b-logo">b</span>
-            </h2>
-            <span flex=""></span>
-            <md-button class="md-icon-button" aria-label="More" ng-click="toggleRight()">
-                <i class="fa fa-users"></i>
-            </md-button>
-        </div>
-    </md-toolbar>
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" back-backdrop="transparent">
+<div>
+    <md-sidenav class="md-sidenav-right b-md-sidenav md-whiteframe-z2" md-component-id="right" back-backdrop="transparent">
         <!--         <md-toolbar>
             <h1 class="md-toolbar-tools">Sidenav Right</h1>
         </md-toolbar> -->
@@ -61,7 +47,42 @@
             </md-tabs>
         </md-content>
     </md-sidenav>
-    <div class="container">
+    <div layout="row" layout-align="center end">
+        <div flex="15" hide-xs></div>
+        <div layout="column" flex="70" flex-gt-lg="50" flex-xs="100">
+            <div layout="column" class="md-whiteframe-1dp">
+                <md-content style="height:75vh;">
+                    <section>
+                        <md-subheader class="md-primary">Unread Messages</md-subheader>
+                        <md-list layout-padding="">
+                            <md-list-item class="md-2-line md-warn" ng-repeat="message in messages">
+                                <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}" ng-hide="!message.face">
+                                <div class="md-list-item-text" ng-class="{'b-mar-l-60': !message.face}">
+                                    <h4 style="font-weight: bold;">{{message.who}}</h4>
+                                    <p class="b-custom">
+                                        {{message.notes}}
+                                    </p>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </section>
+                    <section>
+                </md-content>
+            </div>
+            <div style="margin-top: 20px;" class="md-whiteframe-1dp">
+                <md-content layout-padding>
+                    <md-input-container class="md-block">
+                        <label>Say some cool</label>
+                        <textarea ng-model="user.biography" rows="3" md-select-on-focus></textarea>
+                    </md-input-container>
+                </md-content>
+            </div>
+        </div>
+        <div flex="15" hide-xs>
+        </div>
+    </div>
+</div>
+<!--     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-12">
                 <section class='b-c-container md-whiteframe-2dp'>
@@ -75,7 +96,7 @@
                             <span class='typicons-times'></span>
                         </div>
                     </header>
-                    <!--                     <div class="b-c-setting">
+                    <div class="b-c-setting">
                         <div class='left'>
                             <span class='icon-facetime-video'><i class="fa fa-file-video-o"></i></span>
                             <span class='icon-user'><i class="fa fa-user"></i></span>
@@ -83,7 +104,7 @@
                         <div class='right'>
                             <span class='icon-cog'><i class="fa fa-cog"></i></span>
                         </div>
-                    </div> -->
+                    </div>
                     <ol class='b-c-msg-box'>
                         <li class='another'>
                             <div class='avatar-icon'>
@@ -160,6 +181,4 @@
                 </section>
             </div>
         </div>
-    </div>
-</div>
-<!-- /#wrapper -->
+    </div> -->

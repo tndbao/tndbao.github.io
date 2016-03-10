@@ -6,6 +6,8 @@ var dependences = [
 
     'config',
 
+    'header',
+
     'main'
 ];
 
@@ -15,11 +17,20 @@ define(dependences, function() {
     var moduleDependences = [
         'ngRoute',
 
+        /* Header module */
+        'b.header',
+
         /* Main screen module */
         'b.main',
     ];
 
     var bApp = angular.module('b', moduleDependences);
+
+    bApp.config(function($mdThemingProvider) {
+        $mdThemingProvider.theme('default')
+            .primaryPalette('deep-orange')
+            .accentPalette('orange');
+    });
 
     bApp.config(function($sceDelegateProvider) {
         $sceDelegateProvider.resourceUrlWhitelist([
@@ -30,19 +41,19 @@ define(dependences, function() {
         ]);
     });
 
-    bApp.config(['$routeProvider',
-        function($routeProvider) {
-            $routeProvider.
-            when('/', {
-                templateUrl: './app/main/index.html',
-                controller: 'b.main.ctrl',
-                // css: ['../assets/css/default_top.css']
-            }).
-            otherwise({
-                redirectTo: '/'
-            });
-        }
-    ]);
+    bApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+        $routeProvider.
+        when('/', {
+            templateUrl: './app/main/main.html',
+            controller: 'b.main.ctrl',
+            // css: ['../assets/css/default_top.css']
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
+
+        // $locationProvider.html5Mode(true).hashPrefix("!");
+    }]);
 
     // Start up angular application
     angular.bootstrap(document, ['b']);

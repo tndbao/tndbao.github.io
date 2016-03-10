@@ -21,10 +21,11 @@ var require = {
         'config'                     : './config',
 
         /* Screen controller */
-        'main'                 : './main/main',
+        'main'                       : './main/main',
 
 
         /* Components */
+        'header'                     : './header/header',
 
 
         /* Model */

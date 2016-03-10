@@ -19,63 +19,111 @@ define(dependences, function() {
     ];
 
     MainModule = angular.module('b.main', moduleDependences)
-        .controller('b.main.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', mainCtrl])
+        .controller('b.main.ctrl', ['$scope', '$mdSidenav', '$mdDialog', '$mdMedia', '$location', mainCtrl])
         .controller('b.main.rightNav.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', rightNavCtrl]);
 
-    function mainCtrl($scope, $timeout, $mdSidenav, $log, $q) {
+    function mainCtrl($scope, $mdSidenav, $mdDialog, $mdMedia, $location) {
+        console.log($location.path());
         $('#b-loading-container').fadeOut();
+        $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
+        $scope.showTabDialog = function(ev) {
+            $mdDialog.show({
+                    controller: DialogController,
+                    templateUrl: './app/login/login.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    autoWrap: false,
+                    clickOutsideToClose: false,
+                })
+                .then(function(answer) {
+                    $scope.status = 'You said the information was "' + answer + '".';
+                }, function() {
+                    $scope.status = 'You cancelled the dialog.';
+                });
+        };
 
-        $scope.toggleLeft = buildDelayedToggler('left');
-        $scope.toggleRight = buildToggler('right');
-
-        /**
-         * Supplies a function that will continue to operate until the
-         * time is up.
-         */
-        function debounce(func, wait, context) {
-            var timer;
-
-            return function debounced() {
-                var context = $scope,
-                    args = Array.prototype.slice.call(arguments);
-                $timeout.cancel(timer);
-                timer = $timeout(function() {
-                    timer = undefined;
-                    func.apply(context, args);
-                }, wait || 10);
+        function DialogController($scope, $mdDialog) {
+            $scope.hide = function() {
+                $mdDialog.hide();
+            };
+            $scope.cancel = function() {
+                // $mdDialog.cancel();
+            };
+            $scope.answer = function(answer) {
+                $mdDialog.hide(answer);
             };
         }
 
-        /**
-         * Build handler to open/close a SideNav; when animation finishes
-         * report completion in console
-         */
-        function buildDelayedToggler(navID) {
-            return debounce(function() {
-                $mdSidenav(navID)
-                    .toggle()
-                    .then(function() {
-                        $log.debug("toggle " + navID + " is done");
-                    });
-            }, 200);
-        }
+        $scope.showTabDialog();
 
-        function buildToggler(navID) {
-            return function() {
-                $mdSidenav(navID)
-                    .toggle()
-                    .then(function() {
-                        $log.debug("toggle " + navID + " is done");
-                    });
-            }
-        }
+        var imagePath = './assets/images/matt.jpg';
 
-        $scope.close = function() {
-            $mdSidenav('right').close()
-                .then(function() {
-                    $log.debug("close RIGHT is done");
-                });
-        };
+        $scope.messages = [{
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            what: 'Brunch this weekend?',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        }, ];
     }
 
     function rightNavCtrl($scope, $timeout, $mdSidenav, $log, $q) {

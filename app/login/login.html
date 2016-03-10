@@ -1,0 +1,35 @@
+<md-dialog>
+    <form>
+        <md-dialog-content>
+            <md-content>
+                <div layout="row" layout-align="center center">
+                    <div>
+                        <h1><span class="b-logo md-display-3">b</span></h1>
+                    </div>
+                </div>
+            </md-content>
+            <md-content layout-gt-xs="column" layout-padding layout-fill layout-align="start stretch" style="width: 350px;">
+                <md-input-container>
+                    <md-icon md-font-icon="fa-user" class="fa b-fa-icon"></md-icon>
+                    <input ng-model="user.email" placeholder="Email">
+                </md-input-container class="md-block">
+                <md-input-container>
+                    <md-icon md-font-icon="fa-key" class="fa b-fa-icon"></md-icon>
+                    <input ng-model="user.password" type="password" placeholder="Password">
+                </md-input-container>
+                <md-input-container class="md-block b-no-magin-t-b">
+                    <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1" layout-fill>Remember Me</md-checkbox>
+                </md-input-container>
+                <md-input-container class="md-block b-no-magin-t-b">
+                    <md-button class="md-raised md-primary" layout-fill>Login</md-button>
+                </md-input-container>
+            </md-content>
+            <md-divider></md-divider>
+        </md-dialog-content>
+        <md-dialog-actions>
+            <md-button ng-click="answer('useful')">
+                REGISTER
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -14,15 +14,23 @@ body {
     background: #db4437;
 }
 
+.b-mar-l-60 {
+    margin-left: 60px !important;
+}
+
 
 /*************************
  * LOGO B
  *************************/
 
 .b-logo {
-    font-size: 38px;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
+}
+
+
+.b-logo.b-lg-font {
+    font-size: 68px;
 }
 
 .panel.b-panel {
@@ -90,9 +98,9 @@ body {
 }
 
 
-/**
+/*************************
  * Message box
- */
+*************************/
 
 .b-c-container {
     width: 280px;
