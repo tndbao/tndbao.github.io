@@ -21,7 +21,7 @@ var require = {
         'config'                     : './config',
 
         /* Screen controller */
-        'main'                       : './main/main',
+        'channel'                    : './channel/channel',
 
 
         /* Components */

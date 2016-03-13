@@ -1,12 +1,63 @@
 /* Angular Material Custom */
+
 md-sidenav.b-md-sidenav {
     width: 250px;
 }
 
-.md-list-item-text > .b-custom {
-    background: #FBE9E7;
+md-list-item.b-msg-container {
+    min-height: 35px;
+}
+
+md-list-item.b-msg-another {
+    margin-top: 20px;
+}
+
+img.md-avatar.b-msg-avatar {
+    margin: 0;
+    width: 35px;
+    height: 35px;
+}
+
+img.md-avatar.b-msg-avatar.another {
+    margin-right: 16px;
+}
+
+img.md-avatar.b-msg-avatar.me {
+    margin-left: 16px;
+}
+
+.md-list-item-text.b-msg {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.md-list-item-text.b-msg.same {
+    margin-left: 50px !important;
+}
+
+.md-list-item-text.b-msg.same-another {
+    margin-left: 50px !important;
+}
+
+.md-list-item-text.b-msg.same-me {
+    margin-right: 50px !important;
+}
+
+.md-list-item-text > .b-msg-text {
     border-radius: 10px;
     padding: 5px 10px;
+    color: black;
+    background: #F5F5F5;
+}
+
+.md-list-item-text > .b-msg-text.another {
+    color: black;
+    background: #F5F5F5;
+}
+
+.md-list-item-text > .b-msg-text.me {
+    color: white;
+    background: #0783FC;
 }
 
 .md-sidenav-right {
@@ -32,4 +83,75 @@ md-input-container > md-icon.b-fa-icon {
     .md-sidenav-right {
         top: 46px !important;
     }
+}
+
+
+/**
+ * BIG MESSAGE BOX
+ */
+.b-msg-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.b-msg:not(:first-child) {
+    margin-top: 25px;
+}
+
+.b-msg.same:not(:first-child) {
+    margin-top: 5px;
+}
+
+.b-visiable-hidden {
+    visibility: hidden;
+}
+
+img.b-msg-usr-avatar {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+img.b-msg-usr-avatar.left {
+    margin-right: 16px;
+}
+
+img.b-msg-usr-avatar.right {
+    margin-left: 16px;
+}
+
+.b-msg-content > h4 {
+    font-size: 13px;
+    margin: 0;
+}
+
+.b-msg-content > .b-msg-img {
+    margin-top: 5px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.b-msg-content > .b-msg-text {
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: black;
+    background: #F5F5F5;
+    margin: 0;
+}
+
+.b-msg-content.me > .b-msg-text {
+    color: white;
+    background: #0783FC;
+}
+
+
+.b-msg-f textarea {
+    resize: none;
+}
+
+.b-msg-f .b-msg-ipt-txt {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }

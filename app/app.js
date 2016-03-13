@@ -8,7 +8,7 @@ var dependences = [
 
     'header',
 
-    'main'
+    'channel'
 ];
 
 define(dependences, function() {
@@ -21,15 +21,15 @@ define(dependences, function() {
         'b.header',
 
         /* Main screen module */
-        'b.main',
+        'b.channel',
     ];
 
     var bApp = angular.module('b', moduleDependences);
 
     bApp.config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('deep-orange')
-            .accentPalette('orange');
+            .primaryPalette('blue')
+            .accentPalette('pink');
     });
 
     bApp.config(function($sceDelegateProvider) {
@@ -44,8 +44,8 @@ define(dependences, function() {
     bApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider.
         when('/', {
-            templateUrl: './app/main/main.html',
-            controller: 'b.main.ctrl',
+            templateUrl: './app/channel/channel.html',
+            controller: 'b.channel.ctrl',
             // css: ['../assets/css/default_top.css']
         }).
         otherwise({

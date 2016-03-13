@@ -18,9 +18,9 @@ define(dependences, function() {
         'ngMessages'
     ];
 
-    MainModule = angular.module('b.main', moduleDependences)
-        .controller('b.main.ctrl', ['$scope', '$mdSidenav', '$mdDialog', '$mdMedia', '$location', mainCtrl])
-        .controller('b.main.rightNav.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', rightNavCtrl]);
+    MainModule = angular.module('b.channel', moduleDependences)
+        .controller('b.channel.ctrl', ['$scope', '$mdSidenav', '$mdDialog', '$mdMedia', '$location', mainCtrl])
+        .controller('b.channel.rightNav.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', rightNavCtrl]);
 
     function mainCtrl($scope, $mdSidenav, $mdDialog, $mdMedia, $location) {
         console.log($location.path());
@@ -55,7 +55,7 @@ define(dependences, function() {
             };
         }
 
-        $scope.showTabDialog();
+        // $scope.showTabDialog();
 
         var imagePath = './assets/images/matt.jpg';
 
@@ -64,66 +64,110 @@ define(dependences, function() {
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
-            notes: " I'll be in your neighborhood doing errands"
+            file: './assets/images/eiffel_tower_at_sunrise-wallpaper-1920x1080.jpg',
+            notes: " I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands"
+        },
+        {
+            face: imagePath,
+            same: true,
+            who: 'Min Li Chan',
+            what: 'Brunch this weekend?',
+            when: '3:08PM',
+            file: './assets/images/danh.gif',
+            notes: " I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands"
         }, {
+            face: imagePath,
+            same: true,
+            who: 'Min Li Chan',
             what: 'Brunch this weekend?',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
         }, {
             face: imagePath,
+            me: true,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
         }, {
             face: imagePath,
+            me: true,
+            same: true,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        },{
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            same: true,
+            who: 'Min Li Chan',
+            what: 'Brunch this weekend?',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands I'll be in your neighborhood doing errands"
+        }, {
+            face: imagePath,
+            me: true,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
         }, {
             face: imagePath,
+            me: true,
+            same: true,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, {
+        },{
             face: imagePath,
             what: 'Brunch this weekend?',
             who: 'Min Li Chan',
             when: '3:08PM',
             notes: " I'll be in your neighborhood doing errands"
-        }, ];
+        },{
+            face: imagePath,
+            what: 'Brunch this weekend?',
+            who: 'Min Li Chan',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        },];
     }
 
     function rightNavCtrl($scope, $timeout, $mdSidenav, $log, $q) {
