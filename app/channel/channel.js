@@ -55,7 +55,7 @@ define(dependences, function() {
             };
         }
 
-        // $scope.showTabDialog();
+        $scope.showTabDialog();
 
         var imagePath = './assets/images/matt.jpg';
 

@@ -50,8 +50,8 @@
     <div layout="row" layout-align="center stretch">
         <div flex="15" hide-xs></div>
         <!-- Main -->
-        <div layout="column" flex="70" flex-gt-lg="50" flex-xs="100" style="height:100vh;">
-            <div class="md-whiteframe-1dp" layout="column" style="height: 80%;">
+        <div id="#b-channel-main" layout="column" flex="70" flex-gt-lg="50" flex-xs="100" style="height:100vh;">
+            <div class="md-whiteframe-1dp" layout="column" style="height:calc(100% - 190px);">
                 <md-content style="height: 100%;">
                     <section>
                         <md-subheader class="md-primary">Unread Messages</md-subheader>
@@ -80,16 +80,18 @@
                     <section>
                 </md-content>
             </div>
-            <div style="height: 20%;">
-                <md-content class="b-msg-f" layout="column" layout-align="center stretch">
-                    <div layout="row" layout-align="end start">
-                        <!-- <md-button class="md-raised"><i class="fa fa-paper-plane"></i></md-button> -->
-                        <md-button class="md-icon-button md-primary">
-                            <md-icon md-font-icon="fa-paper-plane" class="fa b-fa-icon"></md-icon>
-                        </md-button>
+            <div>
+                <md-content class="b-msg-f" layout="row" layout-align="center stretch">
+                    <div class="b-msg-ipt-txt" flex="80" flex-gt-lg="90" layout="column" layout-align="center stretch">
+                        <textarea rows="3" placeholder="Say some cool..." md-select-on-focus></textarea>
                     </div>
-                    <div class="b-msg-ipt-txt">
-                        <textarea class="form-control" ng-model="user.biography" rows="3" md-select-on-focus></textarea>
+                    <div flex="20" flex-gt-lg="10" layout="row" layout-align="center start" layout-wrap>
+                        <md-button class="md-icon-button md-primary">
+                            <md-icon md-font-icon="fa-smile-o" class="fa b-fa-icon"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button md-primary">
+                            <md-icon md-font-icon="fa-picture-o" class="fa b-fa-icon"></md-icon>
+                        </md-button>
                     </div>
                 </md-content>
             </div>
