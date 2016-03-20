@@ -2,17 +2,17 @@ var require = {
     baseUrl: '',
     waitSeconds: 0,
     paths: {
-        'jquery'                     : '../node_modules/jquery/dist/jquery.min',
-        'domReady'                   : '../libs/domReady/domReady',
+        'jquery'                     : '../assets/libs/jquery/dist/jquery.min',
+        'domReady'                   : '../assets/libs/domReady/domReady',
 
         /* Angular framework */
-        'angular'                    : '../node_modules/angular/angular.min',
-        'angular-route'              : '../node_modules/angular-route/angular-route.min',
-        'angular-animate'            : '../node_modules/angular-animate/angular-animate.min',
-        'angular-aria'               : '../node_modules/angular-aria/angular-aria.min',
-        'angular-messages'           : '../node_modules/angular-messages/angular-messages.min',
-        'angular-sanitize'           : '../node_modules/angular-sanitize/angular-sanitize.min',
-        'angular-material'           : '../node_modules/angular-material/angular-material',
+        'angular'                    : '../assets/libs/angular/angular.min',
+        'angular-route'              : '../assets/libs/angular-route/angular-route.min',
+        'angular-animate'            : '../assets/libs/angular-animate/angular-animate.min',
+        'angular-aria'               : '../assets/libs/angular-aria/angular-aria.min',
+        'angular-messages'           : '../assets/libs/angular-messages/angular-messages.min',
+        'angular-sanitize'           : '../assets/libs/angular-sanitize/angular-sanitize.min',
+        'angular-material'           : '../assets/libs/angular-material/angular-material',
 
         /* Underscore */
         'underscore'                 : '../assets/libs/underscore/underscore-min',
@@ -22,6 +22,7 @@ var require = {
 
         /* Screen controller */
         'channel'                    : './channel/channel',
+        'login'                      : './login/login',
 
 
         /* Components */

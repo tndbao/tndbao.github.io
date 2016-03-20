@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:700);
 body {
     background-color: #eee;
-    background: url(../images/la_digue_beach_seychelles-1920x1080.jpg) no-repeat center center fixed;
+    background: url(../images/eiffel_tower_at_sunrise-wallpaper-1920x1080.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,85 +19,6 @@ body {
 }
 
 
-
-/*ul.b-list {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-ul.b-list > li {
-    list-style-type: none;
-    display: block;
-    margin-right: 30px;
-}
-
-li.b-list-item {
-    height: auto;
-    margin-top: 20px;
-}
-
-li.b-list-item:after {
-    clear: both;
-}
-
-li.b-list-item.b-same-another {
-    margin-top: 5px;
-}
-
-li.b-list-item > * {
-    display: inline-block;
-}
-
-.b-msg-avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
-
-.b-msg-avatar.left {
-    margin-right: 16px;
-}
-
-.b-msg-avatar.right {
-    margin-left: 16px;
-}
-
-.b-msg-content {
-    width: auto;
-    height: auto;
-    max-width: 80%;
-}
-
-
-
-.b-msg-content.me > p.b-msg-text {
-    color: white;
-    background: #0783FC;
-}
-
-.b-msg-content.same-another {
-    margin-left: 51px !important;
-}
-
-.b-msg-content.same-me {
-    margin-right: 51px !important;
-}
-
-.b-msg-content > h4 {
-    font-size: 13px;
-    margin: 0;
-}
-
-.b-msg-content > .b-msg-text {
-    border-radius: 10px;
-    padding: 5px 10px;
-    color: black;
-    background: #F5F5F5;
-    margin: 0;
-}*/
-
-
 /*************************
  * LOGO B
  *************************/
@@ -108,7 +29,7 @@ li.b-list-item > * {
 }
 
 .b-logo.b-lg-font {
-    font-size: 68px;
+    font-size: 48px;
 }
 
 .panel.b-panel {
@@ -154,25 +75,41 @@ li.b-list-item > * {
  * Custom scrollbar
  *************************/
 
-.b-scroll {
-    overflow-y: scroll;
+::-webkit-scrollbar {
+    height: 14px;
+    width: 6px;
+    background: #eee;
+    margin-right: 4px;
+    /* border-left: 1px solid #ddd */
 }
 
-.b-scroll::-webkit-scrollbar {
-    width: 10px;
-}
-
-.b-scroll::-webkit-scrollbar-track {
-    background-color: rgba(234, 234, 234, 0);
-}
-
-.b-scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+::-webkit-scrollbar-thumb {
+    background: rgba(37, 34, 34, 0.25);
     border-radius: 5px;
+    /*border: 1px solid #cfcfcf;*/
 }
 
-.b-scroll::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+    border: 1px solid #b2b2b2
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #b2b2b2;
+    border: 1px solid #b2b2b2
+}
+
+@-webkit-keyframes pulse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.b-overflow {
+    overflow: auto !important;
 }
 
 
@@ -398,37 +335,6 @@ li.b-list-item > * {
     bottom: 0;
     left: 0;
     width: 100%;
-}
-
-::-webkit-scrollbar {
-    height: 14px;
-    width: 10px;
-    background: #eee;
-    border-left: 1px solid #ddd
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border: 1px solid #cfcfcf
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #b2b2b2;
-    border: 1px solid #b2b2b2
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: #b2b2b2;
-    border: 1px solid #b2b2b2
-}
-
-@-webkit-keyframes pulse {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.5;
-    }
 }
 
 

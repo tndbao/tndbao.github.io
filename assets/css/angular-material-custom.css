@@ -1,68 +1,40 @@
 /* Angular Material Custom */
 
-md-sidenav.b-md-sidenav {
-    width: 250px;
+
+/**
+ * TOP BAR
+ */
+md-toolbar.b-top-bar{
+     min-height: 44px;
 }
 
-md-list-item.b-msg-container {
-    min-height: 35px;
+md-toolbar.b-top-bar > .md-toolbar-tools {
+    height: 44px;
+    max-height: 44px;
 }
 
-md-list-item.b-msg-another {
-    margin-top: 20px;
-}
-
-img.md-avatar.b-msg-avatar {
-    margin: 0;
-    width: 35px;
-    height: 35px;
-}
-
-img.md-avatar.b-msg-avatar.another {
-    margin-right: 16px;
-}
-
-img.md-avatar.b-msg-avatar.me {
-    margin-left: 16px;
-}
-
-.md-list-item-text.b-msg {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.md-list-item-text.b-msg.same {
-    margin-left: 50px !important;
-}
-
-.md-list-item-text.b-msg.same-another {
-    margin-left: 50px !important;
-}
-
-.md-list-item-text.b-msg.same-me {
-    margin-right: 50px !important;
-}
-
-.md-list-item-text > .b-msg-text {
-    border-radius: 10px;
-    padding: 5px 10px;
-    color: black;
-    background: #F5F5F5;
-}
-
-.md-list-item-text > .b-msg-text.another {
-    color: black;
-    background: #F5F5F5;
-}
-
-.md-list-item-text > .b-msg-text.me {
-    color: white;
-    background: #0783FC;
-}
-
+/**
+ * Side nav
+ */
 .md-sidenav-right {
-    top: 64px !important;
+    top: 44px !important;
 }
+
+@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
+    .md-sidenav-right {
+        top: 44px !important;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: landscape) {
+    .md-sidenav-right {
+        top: 44px !important;
+    }
+}
+
+/**
+ * Input container
+ */
 
 md-input-container.b-no-magin-t-b {
     margin-top: 0;
@@ -70,20 +42,9 @@ md-input-container.b-no-magin-t-b {
 }
 
 md-input-container > md-icon.b-fa-icon {
-    top: 17px;
+    top: 10px;
 }
 
-@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: portrait) {
-    .md-sidenav-right {
-        top: 56px !important;
-    }
-}
-
-@media only screen and (min-width: 0) and (max-width: 959px) and (orientation: landscape) {
-    .md-sidenav-right {
-        top: 46px !important;
-    }
-}
 
 
 /**
@@ -147,8 +108,17 @@ img.b-msg-usr-avatar.right {
 
 
 .b-msg-f {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
     padding: 5px;
     border-top: 2px solid #F0EEEF;
+}
+
+@media only screen and (min-width: 0) and (max-width: 1280px) {
+    .b-msg-f {
+        width: 80%;
+    }
 }
 
 

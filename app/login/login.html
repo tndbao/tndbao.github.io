@@ -11,23 +11,23 @@
             <md-content layout-gt-xs="column" layout-padding layout-fill layout-align="start stretch" style="width: 350px;">
                 <md-input-container>
                     <md-icon md-font-icon="fa-user" class="fa b-fa-icon"></md-icon>
-                    <input ng-model="user.email" placeholder="Email">
+                    <input ng-model="username" placeholder="Email" md-autofocus>
                 </md-input-container class="md-block">
                 <md-input-container>
                     <md-icon md-font-icon="fa-key" class="fa b-fa-icon"></md-icon>
-                    <input ng-model="user.password" type="password" placeholder="Password">
+                    <input ng-model="password" type="password" placeholder="Password" ng-click="login(username, password, rememberMe)" ng-keyup="onKeyUp($event.keyCode)">
+                </md-input-container>
+                <md-input-container class="md-block b-no-magin-t-b" ng-hide="true">
+                    <md-checkbox ng-model="rememberMe" aria-label="Checkbox 1" layout-fill>Remember Me</md-checkbox>
                 </md-input-container>
                 <md-input-container class="md-block b-no-magin-t-b">
-                    <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1" layout-fill>Remember Me</md-checkbox>
-                </md-input-container>
-                <md-input-container class="md-block b-no-magin-t-b">
-                    <md-button class="md-raised md-primary" layout-fill>Login</md-button>
+                    <md-button class="md-raised md-primary" layout-fill ng-click="login(username, password, rememberMe)" ng-keyup="onKeyUp($event.keyCode)">Login</md-button>
                 </md-input-container>
             </md-content>
             <md-divider></md-divider>
         </md-dialog-content>
         <md-dialog-actions>
-            <md-button ng-click="answer('useful')">
+            <md-button ng-click="register()">
                 REGISTER
             </md-button>
         </md-dialog-actions>

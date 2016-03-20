@@ -8,7 +8,8 @@ var dependences = [
 
     'header',
 
-    'channel'
+    'channel',
+    'login'
 ];
 
 define(dependences, function() {
@@ -20,8 +21,11 @@ define(dependences, function() {
         /* Header module */
         'b.header',
 
-        /* Main screen module */
+        /* Channel module */
         'b.channel',
+
+        /* Login module */
+        'b.login',
     ];
 
     var bApp = angular.module('b', moduleDependences);
@@ -43,13 +47,18 @@ define(dependences, function() {
 
     bApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider.
-        when('/', {
+        when('/channel', {
             templateUrl: './app/channel/channel.html',
             controller: 'b.channel.ctrl',
             // css: ['../assets/css/default_top.css']
         }).
+        when('/login', {
+            templateUrl: './app/login/login.html',
+            controller: 'b.login.ctrl',
+            // css: ['../assets/css/default_top.css']
+        }).
         otherwise({
-            redirectTo: '/'
+            redirectTo: '/login'
         });
 
         // $locationProvider.html5Mode(true).hashPrefix("!");

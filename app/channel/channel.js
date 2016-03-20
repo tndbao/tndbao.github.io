@@ -23,39 +23,9 @@ define(dependences, function() {
         .controller('b.channel.rightNav.ctrl', ['$scope', '$timeout', '$mdSidenav', '$log', '$q', rightNavCtrl]);
 
     function mainCtrl($scope, $mdSidenav, $mdDialog, $mdMedia, $location) {
-        console.log($location.path());
         $('#b-loading-container').fadeOut();
         $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
-        $scope.showTabDialog = function(ev) {
-            $mdDialog.show({
-                    controller: DialogController,
-                    templateUrl: './app/login/login.html',
-                    parent: angular.element(document.body),
-                    targetEvent: ev,
-                    autoWrap: false,
-                    clickOutsideToClose: false,
-                })
-                .then(function(answer) {
-                    $scope.status = 'You said the information was "' + answer + '".';
-                }, function() {
-                    $scope.status = 'You cancelled the dialog.';
-                });
-        };
-
-        function DialogController($scope, $mdDialog) {
-            $scope.hide = function() {
-                $mdDialog.hide();
-            };
-            $scope.cancel = function() {
-                // $mdDialog.cancel();
-            };
-            $scope.answer = function(answer) {
-                $mdDialog.hide(answer);
-            };
-        }
-
-        $scope.showTabDialog();
 
         var imagePath = './assets/images/matt.jpg';
 

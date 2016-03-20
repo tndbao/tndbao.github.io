@@ -1,12 +1,12 @@
-<div>
-    <md-sidenav class="md-sidenav-right b-md-sidenav md-whiteframe-z2" md-component-id="right" back-backdrop="transparent">
+<div style="height: 100vh;">
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" back-backdrop="transparent">
         <!--         <md-toolbar>
             <h1 class="md-toolbar-tools">Sidenav Right</h1>
         </md-toolbar> -->
         <md-content layout-padding="">
             <md-input-container md-no-float class="md-block b-no-magin-t-b">
                 <md-icon md-font-icon="fa-search" class="fa b-fa-icon"></md-icon>
-                <input ng-model="user.phone" type="text" placeholder="Find user or room" md-errors-spacer="no">
+                <input ng-model="user.phone" type="text" placeholder="Any channel" md-errors-spacer="no">
             </md-input-container>
             <md-tabs md-selected="selectedIndex" md-autoselect md-center-tabs="true" md-no-pagination="no" md-stretch-tabs="always">
                 <md-tab>
@@ -47,12 +47,363 @@
             </md-tabs>
         </md-content>
     </md-sidenav>
-    <div layout="row" layout-align="center stretch">
-        <div flex="15" hide-xs></div>
+    <div layout="row" layout-align="center stretch" style="height: 100%;">
+        <div class="md-whiteframe-1dp" style="background-color: white; padding: 15px 0 15px 0; max-height: 100%;" layout="column" flex="20">
+            <md-input-container class="md-block b-no-magin-t-b" style="padding-left: 15px; padding-right: 15px;" md-no-float >
+                <!-- <md-icon md-font-icon="fa-search" class="fa b-fa-icon"></md-icon> -->
+                <input ng-model="user.phone" type="text" placeholder="Find channel..." md-errors-spacer="no">
+            </md-input-container>
+            <md-content style="padding-bottom: 15px; margin-right: 4px; overflow: hidden;"
+                ng-mouseover="scrollChannelList = true"
+                ng-mouseleave="scrollChannelList = false"
+                ng-class="{'b-overflow': scrollChannelList}">
+                <md-list>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <img src="./assets/images/matt.jpg" class="md-avatar" alt="{{item.who}}">
+                        <div class="md-list-item-text" layout="column" hide-xs>
+                            <h3>Bao Tran</h3>
+                            <h4>Feeling</h4>
+                            <p>Good stuff</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
         <!-- Main -->
-        <div id="#b-channel-main" layout="column" flex="70" flex-gt-lg="50" flex-xs="100" style="height:100vh;">
-            <div class="md-whiteframe-1dp" layout="column" style="height:calc(100% - 190px);">
-                <md-content style="height: 100%;">
+        <div id="#b-channel-main" class="md-whiteframe-1dp" layout="column" flex-gt-md="60" flex-xs="80" flex-gt-xs="80">
+            <div layout="column" style="max-height: 100%;">
+                <md-content style="padding-bottom: 100px; padding-right: 4px; overflow: hidden;"
+                    ng-mouseover="scrollChannelMsg = true"
+                    ng-mouseleave="scrollChannelMsg = false"
+                    ng-class="{'b-overflow': scrollChannelMsg}">
                     <section>
                         <md-subheader class="md-primary">Unread Messages</md-subheader>
                         <div class="b-msg-list" layout="column" layout-align="start stretch">
@@ -77,27 +428,35 @@
                             </div>
                         </div>
                     </section>
-                    <section>
                 </md-content>
-            </div>
-            <div>
-                <md-content class="b-msg-f" layout="row" layout-align="center stretch">
-                    <div class="b-msg-ipt-txt" flex="80" flex-gt-lg="90" layout="column" layout-align="center stretch">
-                        <textarea rows="3" placeholder="Say some cool..." md-select-on-focus></textarea>
+                <md-content class="b-msg-f" layout="row" layout-align="start center">
+                    <div class="b-msg-ipt-txt" flex="90" layout="column" layout-align="center stretch">
+                        <textarea rows="1" placeholder="Say some cool..." md-select-on-focus></textarea>
                     </div>
-                    <div flex="20" flex-gt-lg="10" layout="row" layout-align="center start" layout-wrap>
-                        <md-button class="md-icon-button md-primary">
-                            <md-icon md-font-icon="fa-smile-o" class="fa b-fa-icon"></md-icon>
-                        </md-button>
-                        <md-button class="md-icon-button md-primary">
-                            <md-icon md-font-icon="fa-picture-o" class="fa b-fa-icon"></md-icon>
-                        </md-button>
-                    </div>
+                    <md-button class="md-icon-button md-primary" aria-label="Smile :)">
+                        <i class="fa fa-smile-o fa-2x"></i>
+                    </md-button>
+                    <md-button class="md-icon-button md-primary" aria-label="Picture :)" hide-xs>
+                        <i class="fa fa-picture-o fa-2x"></i>
+                    </md-button>
                 </md-content>
             </div>
         </div>
         <!-- /Main -->
-        <div flex="15" hide-xs>
+        <div layout="column" flex="20" hide-xs hide-gt-xs show-gt-md style="background-color: white; padding: 5px; border-left: 1px solid rgba(158, 158, 158, 0.34)">
+            <md-content style="padding-bottom: 15px; max-height: 100%;">
+                <h2>Using .md-dialog-content class that sets the padding as the spec</h2>
+                <p>
+                    The mango is a juicy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees, cultivated mostly for edible fruit. The majority of these species are found in nature as wild mangoes. They all belong to the flowering plant family Anacardiaceae. The mango is native to South and Southeast Asia, from where it has been distributed worldwide to become one of the most cultivated fruits in the tropics.
+                </p>
+                <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="./assets/images/lanzarote_island-1920x1080.jpg">
+                <p>
+                    The highest concentration of Mangifera genus is in the western part of Malesia (Sumatra, Java and Borneo) and in Burma and India. While other Mangifera species (e.g. horse mango, M. foetida) are also grown on a more localized basis, Mangifera indica&mdash;the "common mango" or "Indian mango"&mdash;is the only mango tree commonly cultivated in many tropical and subtropical regions.
+                </p>
+                <p>
+                    It originated in Indian subcontinent (present day India and Pakistan) and Burma. It is the national fruit of India, Pakistan, and the Philippines, and the national tree of Bangladesh. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations, and religious ceremonies.
+                </p>
+            </md-content>
         </div>
     </div>
 </div>
